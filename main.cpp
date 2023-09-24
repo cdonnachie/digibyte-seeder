@@ -170,8 +170,10 @@ public:
         filter_whitelist.insert(NODE_NETWORK_LIMITED); // x400
         filter_whitelist.insert(NODE_NETWORK_LIMITED | NODE_BLOOM); // x404
         filter_whitelist.insert(NODE_NETWORK_LIMITED | NODE_WITNESS); // x408
+        filter_whitelist.insert(NODE_NETWORK_LIMITED | NODE_NETWORK | NODE_WITNESS); // x409
         filter_whitelist.insert(NODE_NETWORK_LIMITED | NODE_WITNESS | NODE_COMPACT_FILTERS); // x448
         filter_whitelist.insert(NODE_NETWORK_LIMITED | NODE_WITNESS | NODE_BLOOM); // x40c
+        filter_whitelist.insert(NODE_NETWORK_LIMITED | NODE_NETWORK | NODE_WITNESS | NODE_BLOOM); // x40d
     }
     if (host != NULL && ns == NULL) showHelp = true;
     if (showHelp) {
